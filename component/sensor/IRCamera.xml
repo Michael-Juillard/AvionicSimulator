@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>IRCamera</name>
+	<type>camera</type>
+	<initalMode>1</initalMode>
+    <!-- resolution 580x480 with 16 bits => 4.45 Mb -->
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">4.45</packetSize>
+			<ratePacket unit="ms">250</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>nominal</name>
+			<power unit="mW">400</power>
+			<packetSize unit="Mbits">4.45</packetSize>
+			<ratePacket unit="ms">35</ratePacket>
+			<accuracySensor>0.5</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

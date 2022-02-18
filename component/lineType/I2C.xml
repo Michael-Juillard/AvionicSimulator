@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<line>
+	<type>I2C</type>
+	<rate unit="Mb/s">0.5</rate> <!-- 0.1 to 1 [Mb/s] -->
+	<powerLossPM unit="mW/m">1</powerLossPM>
+	<lagPM unit="us/m">5000</lagPM>
+</line>
+
+

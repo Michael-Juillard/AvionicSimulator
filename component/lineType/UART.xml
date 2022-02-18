@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<line>
+	<type>UART</type>
+	<rate unit="Mb/s">1.0</rate><!-- 0.1 to 2 [Mb/s] -->
+	<powerLossPM unit="mW/m">1</powerLossPM>
+	<lagPM unit="us/m">5000</lagPM>
+</line>
+
+

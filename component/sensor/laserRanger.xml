@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>laserRanger</name>
+	<type>laser</type>
+	<initalMode>1</initalMode>
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">0.1</packetSize>
+			<ratePacket unit="ms">200</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>Nominal</name>
+			<power unit="mW">300</power>
+			<packetSize unit="Mbits">2</packetSize>
+			<ratePacket unit="ms">10</ratePacket>
+			<accuracySensor>0.8</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

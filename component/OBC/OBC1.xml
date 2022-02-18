@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBC>
+	<name>OBC 1</name>
+    <storage>
+        <unit id="1">
+            <type>SSD</type>
+            <capacity unit="Mbits">34359</capacity> <!-- 4GB in Mbits -->
+            <inputRate unit="Mb/s">30</inputRate> <!-- not used yet -->
+            <outputRate unit="Mb/s">30</outputRate><!-- not used yet -->
+            <readWriteSimultanous>true</readWriteSimultanous><!-- not used yet -->
+        </unit>
+        <unit id="2">
+            <type>SSD</type>
+            <capacity unit="Mbits">34359</capacity>
+            <inputRate unit="Mb/s">30</inputRate><!-- not used yet -->
+            <outputRate unit="Mb/s">30</outputRate><!-- not used yet -->
+            <readWriteSimultanous>true</readWriteSimultanous><!-- not used yet -->
+        </unit>
+        <unit id="3">
+            <type>SSD</type>
+            <capacity unit="Mbits">34359</capacity>
+            <inputRate unit="Mb/s">30</inputRate><!-- not used yet -->
+            <outputRate unit="Mb/s">30</outputRate><!-- not used yet -->
+            <readWriteSimultanous>true</readWriteSimultanous><!-- not used yet -->
+        </unit>
+    </storage>
+    <HWaccelerometers>
+        <FPGA>
+            <unit id ="1"> <!-- Dummy -->
+                <nbGates>0</nbGates>
+                <power unit="mW">0</power>
+                <nbIO>0</nbIO>
+                <reprogramable>true</reprogramable>
+                <reprogramTime unit="ms">0</reprogramTime>
+                <initalAlgoId>0</initalAlgoId>
+            </unit>
+        </FPGA>
+        <ASIC>
+            <unit id ="1">
+                <algorithmIdImpl>5</algorithmIdImpl>
+                <power unit="mW">900</power>
+                <nbIO>20</nbIO>
+                <processingSpeed unit="ms">120</processingSpeed>
+                <processingRate unit="Mbit/s">6000</processingRate>
+            </unit>
+        </ASIC>     
+    </HWaccelerometers>  
+    <algorithms>
+        <algo id="1">
+            <name>Lost in Space</name>
+            <ASICimplemented>false</ASICimplemented>
+            <FPGAoperationReductionFactor>1.0</FPGAoperationReductionFactor>
+            <idMemoryLinked>1</idMemoryLinked>
+            <modes>
+                <mode id="1">
+                    <name>IDL</name>
+                    <nbOperationPerS unit="M">0.1</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">500</processingSpeed>
+                    <processingRate unit="Mbit/s">200</processingRate>
+                    <frequency unit="Hz">10</frequency>
+                </mode>
+                <mode id="2">
+                    <name>Fast</name>
+                    <nbOperationPerS unit="M">1200</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">50</processingSpeed>
+                    <processingRate unit="Mbit/s">2600</processingRate>
+                    <frequency unit="Hz">120</frequency>
+                </mode>
+                <mode id="3">
+                    <name>Accurate</name>
+                    <nbOperationPerS unit="M">1100</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">200</processingSpeed>
+                    <processingRate unit="Mbit/s">2200</processingRate>
+                    <frequency unit="Hz">105</frequency>
+                </mode>
+                <mode id="4">
+                    <name>OFF</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">0</processingSpeed>
+                    <processingRate unit="Mbit/s">0</processingRate>
+                    <frequency unit="Hz">1</frequency> <!-- dummy -->
+                </mode>
+            </modes>
+        </algo>
+        <algo id="2">
+            <name>Target tracking (long range)</name>
+            <ASICimplemented>false</ASICimplemented>
+            <FPGAoperationReductionFactor>1.0</FPGAoperationReductionFactor>
+            <idMemoryLinked>1</idMemoryLinked>
+            <modes>
+                <mode id="1">
+                    <name>IDL</name>
+                    <nbOperationPerS unit="M">0.1</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">200</processingSpeed>
+                    <processingRate unit="Mbit/s">200</processingRate>
+                    <frequency unit="Hz">10</frequency>
+                </mode>
+                <mode id="2">
+                    <name>Fast</name>
+                    <nbOperationPerS unit="M">900</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">15</processingSpeed>
+                    <processingRate unit="Mbit/s">2500</processingRate>
+                    <frequency unit="Hz">140</frequency>
+                </mode>
+                <mode id="3">
+                    <name>Accurate</name>
+                    <nbOperationPerS unit="M">1300</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">40</processingSpeed>
+                    <processingRate unit="Mbit/s">2100</processingRate>
+                    <frequency unit="Hz">110</frequency>
+                </mode>
+                <mode id="4">
+                    <name>OFF</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">0</processingSpeed>
+                    <processingRate unit="Mbit/s">0</processingRate>
+                    <frequency unit="Hz">1</frequency> <!-- dummy -->
+                </mode>
+            </modes>
+        </algo>
+        <algo id="3">
+            <name>Target tracking (short range)</name>
+            <ASICimplemented>false</ASICimplemented>
+            <FPGAoperationReductionFactor>1.0</FPGAoperationReductionFactor>
+            <idMemoryLinked>2</idMemoryLinked>
+            <modes>
+                <mode id="1">
+                    <name>IDL</name>
+                    <nbOperationPerS unit="M">100</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">200</processingSpeed>
+                    <processingRate unit="Mbit/s">20</processingRate>
+                    <frequency unit="Hz">10</frequency>
+                </mode>
+                <mode id="2">
+                    <name>Fast</name>
+                    <nbOperationPerS unit="M">2000</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">15</processingSpeed>
+                    <processingRate unit="Mbit/s">5700</processingRate>
+                    <frequency unit="Hz">80</frequency>
+                </mode>
+                <mode id="3">
+                    <name>Accurate</name>
+                    <nbOperationPerS unit="M">2400</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">40</processingSpeed>
+                    <processingRate unit="Mbit/s">5280</processingRate>
+                    <frequency unit="Hz">70</frequency>
+                </mode>
+                <mode id="4">
+                    <name>OFF</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">0</processingSpeed>
+                    <processingRate unit="Mbit/s">0</processingRate>
+                    <frequency unit="Hz">1</frequency> <!-- dummy -->
+                </mode>
+            </modes>
+        </algo>
+        <algo id="4">
+            <name>Range reconstruction</name>
+            <ASICimplemented>false</ASICimplemented>
+            <FPGAoperationReductionFactor>1.0</FPGAoperationReductionFactor>
+            <idMemoryLinked>3</idMemoryLinked>
+            <modes>
+                <mode id="1">
+                    <name>IDL</name>
+                    <nbOperationPerS unit="M">0.1</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">500</processingSpeed>
+                    <processingRate unit="Mbit/s">20</processingRate>
+                    <frequency unit="Hz">1</frequency>
+                </mode>
+                <mode id="2">
+                    <name>Fast</name>
+                    <nbOperationPerS unit="M">1700</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">5</processingSpeed>
+                    <processingRate unit="Mbit/s">300</processingRate>
+                    <frequency unit="Hz">110</frequency>
+                </mode>
+                <mode id="3">
+                    <name>Accurate</name>
+                    <nbOperationPerS unit="M">2100</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">15</processingSpeed>
+                    <processingRate unit="Mbit/s">200</processingRate>
+                    <frequency unit="Hz">90</frequency>
+                </mode>
+                <mode id="4">
+                    <name>OFF</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS>
+                    <nbGateFPGA>0</nbGateFPGA>
+                    <processingSpeed unit="ms">0</processingSpeed>
+                    <processingRate unit="Mbit/s">0</processingRate>
+                    <frequency unit="Hz">1</frequency> <!-- dummy -->
+                </mode>
+            </modes>
+        </algo>
+        <algo id="5">
+            <name>Motion reconstruction</name>
+            <ASICimplemented>true</ASICimplemented>
+            <FPGAoperationReductionFactor>1.0</FPGAoperationReductionFactor>
+            <idMemoryLinked>2</idMemoryLinked>
+            <modes>
+                <mode id="1">
+                    <name>Nominal</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS> <!-- not relevant -->
+                    <frequency unit="Hz">45</frequency>
+                    <processingSpeed unit="ms">0</processingSpeed><!-- Overwrite by ASIC -->
+                    <processingRate unit="Mbit/s">0</processingRate><!-- Overwrite by ASIC -->
+                    <nbGateFPGA>0</nbGateFPGA>
+                </mode>                
+                <mode id="4">
+                    <name>Off</name>
+                    <nbOperationPerS unit="M">0</nbOperationPerS> <!-- not relevant -->
+                    <frequency unit="Hz">1</frequency> <!-- dummy -->
+                    <processingSpeed unit="ms">0</processingSpeed><!-- Overwrite by ASIC -->
+                    <processingRate unit="Mbit/s">0</processingRate><!-- Overwrite by ASIC -->
+                    <nbGateFPGA>0</nbGateFPGA>
+                </mode>
+            </modes>
+        </algo>
+    </algorithms>
+    <initalMode>1</initalMode>
+	<modesOBC>
+        <mode id="1">
+            <name>IDL</name>
+            <MIPS>1000</MIPS>
+            <power unit="mW">2000</power>
+        </mode>
+        <mode id="2">
+			<name>LOW</name>
+            <MIPS>4000</MIPS>
+            <power unit="mW">6000</power>
+		</mode>
+        <mode id="3">
+			<name>FULL</name>
+            <MIPS>7000</MIPS>
+            <power unit="mW">9000</power>
+		</mode>
+    </modesOBC>
+</OBC>
+
+

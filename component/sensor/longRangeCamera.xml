@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>longRangeCamera</name>
+	<type>camera</type>
+	<initalMode>1</initalMode>
+    <!-- resolution 1024x1024 with 16 bits => 16.7 Mb -->
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">16.7</packetSize>
+			<ratePacket unit="ms">200</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>TargetFinding</name>
+			<power unit="mW">750</power>
+			<packetSize unit="Mbits">16.7</packetSize>
+			<ratePacket unit="ms">15</ratePacket>
+			<accuracySensor>0.2</accuracySensor>
+		</mode>
+        <mode id="3">
+			<name>TargetTracking</name>
+			<power unit="mW">600</power>
+			<packetSize unit="Mbits">16.7</packetSize>
+			<ratePacket unit="ms">30</ratePacket>
+			<accuracySensor>0.3</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

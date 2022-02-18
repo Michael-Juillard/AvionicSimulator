@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<line>
+	<type>Camera Link</type>
+	<rate unit="Mb/s">5000</rate><!-- 2000 to 5000 [Mb/s] -->
+	<powerLossPM unit="mW/m">1</powerLossPM>
+	<lagPM unit="us/m">5000</lagPM>
+</line>
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>LIDAR</name>
+	<type>LIDAR</type>
+	<initalMode>1</initalMode>
+    <!-- resolution 160x120 with 174 bits => 33.4 Mb -->
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">33.4</packetSize>
+			<ratePacket unit="ms">600</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>fast</name>
+			<power unit="mW">900</power>
+			<packetSize unit="Mbits">33.4</packetSize>
+			<ratePacket unit="ms">100</ratePacket>
+			<accuracySensor>0.3</accuracySensor>
+		</mode>
+        <mode id="3">
+			<name>accurate</name>
+			<power unit="mW">800</power>
+			<packetSize unit="Mbits">33.4</packetSize>
+			<ratePacket unit="ms">180</ratePacket>
+			<accuracySensor>0.5</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>test</name>
+	<type>camera</type>
+	<initalMode>1</initalMode>
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">1</packetSize>
+			<ratePacket unit="ms">10</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>FULL</name>
+			<power unit="mW">100</power>
+			<packetSize unit="Mbits">20</packetSize>
+			<ratePacket unit="ms">3</ratePacket>
+			<accuracySensor>0.6</accuracySensor>
+		</mode>
+		<mode id="3">
+			<name>Saving</name>
+			<power unit="mW">30</power>
+			<packetSize unit="Mbits">10</packetSize>
+			<ratePacket unit="ms">5</ratePacket>
+			<accuracySensor>0.3</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

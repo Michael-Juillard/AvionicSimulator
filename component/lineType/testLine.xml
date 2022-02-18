@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<line>
+	<type>test</type>
+	<rate unit="Mb/s">500</rate>
+	<powerLossPM unit="mW/m">1</powerLossPM>
+	<lagPM unit="us/m">5000</lagPM>
+</line>
+
+

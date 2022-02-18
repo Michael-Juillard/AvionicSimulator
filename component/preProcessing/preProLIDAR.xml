@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preProcessing>
+	<type>Compression</type>
+    <storageIn>
+        <type>SSD</type>
+        <capacity unit="Mbits">34359</capacity> <!-- 4GB in Mbits -->
+        <inputRate unit="Mb/s">30</inputRate>
+        <outputRate unit="Mb/s">30</outputRate>
+        <readWriteSimultanous>true</readWriteSimultanous>
+    </storageIn>
+    <storageOut>
+        <type>SSD</type>
+        <capacity unit="Mbits">34359</capacity> <!-- 4GB in Mbits -->
+        <inputRate unit="Mb/s">30</inputRate>
+        <outputRate unit="Mb/s">30</outputRate>
+        <readWriteSimultanous>true</readWriteSimultanous>
+    </storageOut>
+    <initalMode>1</initalMode>
+	<modes>
+        <mode id="1">
+            <name>LOW</name>
+            <compressionFactor>6</compressionFactor>
+            <compressionRate unit="Mb/s">250</compressionRate>
+            <lagCompression unit="us">1000</lagCompression>
+            <power unit="mW">300</power>
+	    <accuaracyLoss>0.1</accuaracyLoss>
+        </mode>
+        <mode id="2">
+	    <name>FULL</name>
+            <compressionFactor>9</compressionFactor>
+            <compressionRate unit="Mb/s">340</compressionRate>
+            <lagCompression unit="us">1500</lagCompression>
+            <power unit="mW">800</power>
+	    <accuaracyLoss>0.3</accuaracyLoss>
+	</mode>
+    </modes>
+</preProcessing>
+
+

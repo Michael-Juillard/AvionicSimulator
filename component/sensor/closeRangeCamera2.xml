@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>closeRangeCamera2</name>
+	<type>camera</type>
+	<initalMode>1</initalMode>
+    <!-- resolution 2160x2160 with 16 bits => 74.6 Mb -->
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">10</power>
+			<packetSize unit="Mbits">74.6</packetSize>
+			<ratePacket unit="ms">200</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>MotionReconstruction</name>
+			<power unit="mW">450</power>
+			<packetSize unit="Mbits">74.6</packetSize>
+			<ratePacket unit="ms">28</ratePacket>
+			<accuracySensor>0.8</accuracySensor>
+		</mode>
+		<mode id="3">
+			<name>TargetTracking</name>
+			<power unit="mW">340</power>
+			<packetSize unit="Mbits">74.6</packetSize>
+			<ratePacket unit="ms">35</ratePacket>
+			<accuracySensor>0.7</accuracySensor>
+		</mode>
+	</modes>
+</sensor>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sensor>
+	<name>Radar</name>
+	<type>Radar</type>
+	<initalMode>1</initalMode>
+    <!-- resolution 580x480 with 16 bits => 4.45 Mb -->
+	<modes>
+		<mode id="1">
+			<name>IDL</name>
+			<power unit="mW">100</power>
+			<packetSize unit="Mbits">4</packetSize>
+			<ratePacket unit="ms">350</ratePacket>
+			<accuracySensor>0.0</accuracySensor>
+		</mode>
+		<mode id="2">
+			<name>nominal</name>
+			<power unit="mW">700</power>
+			<packetSize unit="Mbits">4</packetSize>
+			<ratePacket unit="ms">50</ratePacket>
+			<accuracySensor>0.4</accuracySensor>
+		</mode>
+	</modes>
+</sensor>
