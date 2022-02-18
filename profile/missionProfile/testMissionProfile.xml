@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionProfile>
+    <name>test mission</name>
+    <satellite>CSO</satellite>
+    <!--<timeSimulation unit="s">0.2</timeSimulation> not used anymore -->
+    <powerProfile>testPowerProfile</powerProfile>
+    <sensors> <!-- load diretcly from sensor directory -->
+        <sensorName id="1">testSensor</sensorName>
+        <sensorName id="2">testSensor</sensorName>
+        <sensorName id="3">testSensor</sensorName>
+    </sensors>
+    <hardwareUsageProfile>testHWProfile</hardwareUsageProfile>
+    <preProcessingUnit><!-- load diretcly from pre processing directory -->
+        <preProcessName id="1">testPrePro</preProcessName>
+    </preProcessingUnit>
+    <OBC>testOBC</OBC><!--directly load from directory -->
+    <linking>
+        <line id="1">
+            <lineType>testLine</lineType><!--directly load from directory -->
+            <length>5</length>
+            <redundant>true</redundant>
+            <connectToOBC>false</connectToOBC>
+            <idOBCMem>0</idOBCMem><!-- not connected -->
+            <sensorConnected>
+                <id>1</id>
+            </sensorConnected>
+            <preProcessingUnitID>1</preProcessingUnitID>
+        </line>
+        <line id="2">
+            <lineType>testLine</lineType><!--directly load from directory -->
+            <length>1</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>1</idOBCMem>
+            <sensorConnected>
+                <id>2</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+        <line id="3">
+            <lineType>testLine</lineType><!--directly load from directory -->
+            <length>3</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>2</idOBCMem>
+            <sensorConnected><!-- no sensor -->
+            </sensorConnected>
+            <preProcessingUnitID>1</preProcessingUnitID>
+        </line>
+        <line id="4">
+            <lineType>testLine</lineType><!--directly load from directory -->
+            <length>3</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>3</idOBCMem>
+            <sensorConnected>
+                <id>3</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+    </linking>
+</missionProfile>
+
+

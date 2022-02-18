@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionProfile>
+    <name>Avionic 2</name>
+    <satellite>CSO</satellite>
+    <!--<timeSimulation unit="s">0.2</timeSimulation> not used anymore -->
+    <powerProfile>arch1_2</powerProfile> <!-- same power profile for arch1 and 2 -->
+    <sensors> <!-- load diretcly from sensor directory -->
+        <sensorName id="1">longRangeCamera2</sensorName>
+        <sensorName id="2">longRangeCamera2</sensorName>
+        <sensorName id="3">IRCamera</sensorName>
+        <sensorName id="4">Radar</sensorName>
+        <sensorName id="5">LIDAR</sensorName>
+        <sensorName id="6">closeRangeCamera2</sensorName>
+        <sensorName id="7">closeRangeCamera2</sensorName>
+    </sensors>
+    <dynamicSim>1</dynamicSim><!-- if dynamic sim set para to 1 -->
+    <hardwareUsageProfile>arch2</hardwareUsageProfile>
+    <preProcessingUnit><!-- load diretcly from pre processing directory -->
+            <preProcessName id="1">preProRADAR</preProcessName>
+            <preProcessName id="2">preProLIDAR</preProcessName>
+    </preProcessingUnit>
+    <OBC>OBC2_s2</OBC><!--directly load from directory -->
+    <linking>
+        <line id="1">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>1.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>1</idOBCMem><!-- not connected -->
+            <sensorConnected>
+                <id>1</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+        <line id="2">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>1.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>1</idOBCMem>
+            <sensorConnected>
+                <id>2</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+        <line id="3">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>0.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>1</idOBCMem>
+            <sensorConnected>
+                <id>3</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+        <line id="4">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>0.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>false</connectToOBC>
+            <idOBCMem>0</idOBCMem>
+            <sensorConnected>
+                <id>4</id>
+            </sensorConnected>
+            <preProcessingUnitID>1</preProcessingUnitID>
+        </line>
+        <line id="5">
+            <lineType>SpaceWire</lineType><!--directly load from directory -->
+            <length>0.2</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>2</idOBCMem>
+            <sensorConnected>
+            </sensorConnected>
+            <preProcessingUnitID>1</preProcessingUnitID>
+        </line>
+        <line id="6">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>0.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>false</connectToOBC>
+            <idOBCMem>0</idOBCMem>
+            <sensorConnected>
+                <id>5</id>
+            </sensorConnected>
+            <preProcessingUnitID>2</preProcessingUnitID>
+        </line>
+        <line id="7">
+            <lineType>SpaceWire</lineType><!--directly load from directory -->
+            <length>0.2</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>3</idOBCMem>
+            <sensorConnected>
+            </sensorConnected>
+            <preProcessingUnitID>2</preProcessingUnitID>
+        </line>
+        <line id="8">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>1.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>4</idOBCMem><!-- not connected -->
+            <sensorConnected>
+                <id>6</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+        <line id="9">
+            <lineType>CameraLink</lineType><!--directly load from directory -->
+            <length>1.5</length>
+            <redundant>true</redundant>
+            <connectToOBC>true</connectToOBC>
+            <idOBCMem>4</idOBCMem>
+            <sensorConnected>
+                <id>7</id>
+            </sensorConnected>
+            <preProcessingUnitID>0</preProcessingUnitID>
+        </line>
+    </linking>
+</missionProfile>
