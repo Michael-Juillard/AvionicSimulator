@@ -62,7 +62,7 @@ classdef missionProfile < handle
                     if oneSensor.hasAttributes()
                         idSensor = str2double(oneSensor.getAttribute('id'));
                         nameSensor=char(oneSensor.item(0).getTextContent);
-                        obj.sensorsList(idSensor) = {sensor(['sensor/' nameSensor '.xml'])};
+                        obj.sensorsList(idSensor) = {sensor(['component/sensor/' nameSensor '.xml'])};
                     end
                 end
             end
@@ -90,14 +90,14 @@ classdef missionProfile < handle
                     if onePreProp.hasAttributes()
                         idPreProp = str2double(onePreProp.getAttribute('id'));
                         namePreProp=char(onePreProp.item(0).getTextContent);
-                        obj.preProcessingUnitList(idPreProp) = {preProcessing(['preProcessing/' namePreProp '.xml'])};
+                        obj.preProcessingUnitList(idPreProp) = {preProcessing(['component/preProcessing/' namePreProp '.xml'])};
                     end
                 end
             end
 
             OBCChild = xRoot.getElementsByTagName('OBC');
             if OBCChild.getLength ~= 0
-                obj.OBC = OBC(['OBC/' char(OBCChild.item(0).getTextContent) '.xml']);
+                obj.OBC = OBC(['component/OBC/' char(OBCChild.item(0).getTextContent) '.xml']);
             end
 
             %Linking loading
@@ -168,7 +168,7 @@ classdef missionProfile < handle
                             end
                         end
                         
-                        obj.lineConnection(idLine) = {lineConnection(['lineType/' lineType '.xml'],length,connectToOBC, idOBCMem,listSensorConnected,idPreProcess)};
+                        obj.lineConnection(idLine) = {lineConnection(['component/lineType/' lineType '.xml'],length,connectToOBC, idOBCMem,listSensorConnected,idPreProcess)};
 
                     end
                 end
@@ -203,7 +203,7 @@ classdef missionProfile < handle
         end
         
         function success = loadPowerProfile(obj,scenario)
-            fullPathFile = ['PowerProfile/Power_' scenario '_' obj.powerProfileFile '.csv'];
+            fullPathFile = ['profile/PowerProfile/Power_' scenario '_' obj.powerProfileFile '.csv'];
             if isfile(fullPathFile)
                 %disp(fullPathFile)
                 tabelPowerProf = readtable(fullPathFile);
@@ -242,7 +242,7 @@ classdef missionProfile < handle
         
         function success = loadHardwareProfile(obj,scenario)
             if obj.dynamicSim ~= 1 
-                fullPathFile = ['HWProfile/HW_' scenario '_' obj.hardwareUsageProfileFile '.csv'];
+                fullPathFile = ['profile/HWProfile/HW_' scenario '_' obj.hardwareUsageProfileFile '.csv'];
                 if isfile(fullPathFile)
                     tabelHWProf = readtable(fullPathFile);
                     nbItem = size(tabelHWProf,1);
