@@ -4,10 +4,10 @@ function main(varargin)
 %% To Do
 % -time scale 
 % gate & IO use per FPGA
-
+ addpath(genpath('core'))
 
 %% Input to sim
-Defaults = {0,'avionic2_s2_dyn','scenario2','test_profile2',1};
+Defaults = {1,'avionic2_s2_dyn','scenario2','test_profile2',1};
 Defaults(1:nargin) = varargin;
 
 wantToSave = Defaults{1};
@@ -24,7 +24,7 @@ close all
 
 
 %% Load mission profile
-oneProfile = missionProfile(['missionProfile/' missionProfileName '.xml']);
+oneProfile = missionProfile(['profile/missionProfile/' missionProfileName '.xml']);
 disp(['Mission Profile loaded for ' missionProfileName '_' scenario '-' it] )
 getInfoReadable(oneProfile);
 
@@ -81,12 +81,12 @@ lineBusyness = {zeros(1+size(listIdLine,2),nbPoint)};
 sensorsOutAverage = {zeros(1+size(listIdSensor,2),nbPoint)};
 
 % Info for Optimizer 
-if getDynamicSim(oneProfile)
-    [nbModeMax, allModePower, allModePackSize,allModeRatePacket, allModeAccuracySensor] = getAllModeParamSensor(oneProfile)
-    % [nbModeMax, allModeCompressionFactor, allModeCompressionRate,allModeCompressionLag,allModePower, allModeAccuaracyLoss] = getAllModeParamPrePro(oneProfile)
-    [nbModeMax, allModeNbOperationPerS, allModeProcessingSpeed,allModeProcessingRate,allModeFrequency,allModePeriode] = getAllModeParamAlgo(oneProfile)
-    [nbMode, MIPSMode, powerMode] = getParamPerModeOBC(oneProfile)
-end
+% if getDynamicSim(oneProfile)
+%     [nbModeMax, allModePower, allModePackSize,allModeRatePacket, allModeAccuracySensor] = getAllModeParamSensor(oneProfile)
+%     % [nbModeMax, allModeCompressionFactor, allModeCompressionRate,allModeCompressionLag,allModePower, allModeAccuaracyLoss] = getAllModeParamPrePro(oneProfile)
+%     [nbModeMax, allModeNbOperationPerS, allModeProcessingSpeed,allModeProcessingRate,allModeFrequency,allModePeriode] = getAllModeParamAlgo(oneProfile)
+%     [nbMode, MIPSMode, powerMode] = getParamPerModeOBC(oneProfile)
+% end
 
 %Initialize algo in FPGA
 for idFPGA = listIdFPGA
@@ -367,8 +367,8 @@ disp([ missionProfileName '_' scenario '-' it ' end smooth at ' num2str(toc) ' s
 %% Saving Data 
 if wantToSave ~= 0
     [name, satellite] = getInfo(oneProfile);
-    initFolderName = '/matlab/';
-    folderName = ['results/' name '_' satellite '_' scenario '_2' it ];
+    initFolderName = '';
+    folderName = ['result/' name '_' satellite '_' scenario '_2' it ];
     mkdir([initFolderName folderName])
     save([initFolderName folderName '/' 'powerConsumptionMat.mat'],'powerConsumptionMat');
     save([initFolderName folderName '/' 'OBCMemeUsageMat.mat'],'OBCMemeUsageMat');
