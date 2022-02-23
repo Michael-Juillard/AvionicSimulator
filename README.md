@@ -1,13 +1,13 @@
 # AvionicSimulator
 
 ## 1 - Project Description
-The goal of this simulator is to emulate at a high level the principle of a satellite avionic dedicated to Active Debris Removal. It uses profiles created by the users and models of elements to simulate the behavior of the system. More information can be found in the following publication: "Simulation Tool to Study High Performance Avionic for Active Debris Removal Missions" (link) by Michaël Juillard, Muriel Richard-Noca & Jean-Paul Kneib (2019 IEEE/AIAA 38th Digital Avionics Systems Conference).
+The goal of this simulator is to emulate at a high level the principle of a satellite avionic dedicated to Active Debris Removal. It uses profiles created by the users and models of elements to simulate the behavior of the system. More information can be found in the following publication: "Simulation Tool to Study High Performance Avionic for Active Debris Removal Missions" [(link)](https://www.researchgate.net/profile/Michael-Juillard-2/publication/341077819_Simulation_Tool_to_Study_High_Performance_Avionic_for_Active_Debris_Removal_Missions/links/603a251f4585158939d29eda/Simulation-Tool-to-Study-High-Performance-Avionic-for-Active-Debris-Removal-Missions.pdf). by Michaël Juillard, Muriel Richard-Noca & Jean-Paul Kneib (2019 IEEE/AIAA 38th Digital Avionics Systems Conference).
 
 The tool is exclusively using Matlab (version 2020a) with no additional libraries. It uses CSV and XML files as the basis for the model and behavior.
 
 ## 2 - How to Use
 
-This tool requires Matlab(link) to run. TO test the basic case, you open the main.m file and run it. It will automatically load the needed components.
+This tool requires [Matlab](https://ch.mathworks.com/products/matlab.html) to run. TO test the basic case, you open the main.m file and run it. It will automatically load the needed components.
 
 The "component" folder contains the models of the system. New components can be added easily and should use the structure of the "testXXX.xml" file.
 
