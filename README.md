@@ -7,7 +7,7 @@ The tool is exclusively using Matlab (version 2020a) with no additional librarie
 
 ## 2 - How to Use
 
-This tool requires [Matlab](https://ch.mathworks.com/products/matlab.html) to run. TO test the basic case, you open the main.m file and run it. It will automatically load the needed components.
+This tool requires [Matlab](https://ch.mathworks.com/products/matlab.html) to run. To test the basic case, you open the main.m file and run it. It will automatically load the needed components.
 
 The "component" folder contains the models of the system. New components can be added easily and should use the structure of the "testXXX.xml" file.
 
@@ -19,5 +19,5 @@ The "profile" folder has descriptions of all the elements' behavior. These files
 
 The "result" folder will store the results of the simulator.
 
-## 3- Credits
+## 3 - Credits
 Michael Juillard
