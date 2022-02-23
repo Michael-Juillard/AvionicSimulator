@@ -5,7 +5,7 @@ close all
 
 
 %% load data 
-selpath = uigetdir('/matlab/results');
+selpath = uigetdir('../result/');
 
 load([selpath '/' 'powerConsumptionMat.mat']);
 load([selpath '/' 'OBCMemeUsageMat.mat']);
